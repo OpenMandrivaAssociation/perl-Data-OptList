@@ -14,6 +14,7 @@ Source:     http://www.cpan.org/modules/by-module/Data/%{module}-%{version}.tar.
 BuildRequires:  perl(Sub::Install)
 BuildRequires:  perl(Params::Util)
 BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description 
 Hashes are great for storing named data, but if you want more than one entry
