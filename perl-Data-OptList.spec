@@ -1,7 +1,7 @@
 %define module  Data-OptList
 %define	name	perl-%{module}
 %define version 0.103
-%define release %mkrel 1
+%define release %mkrel 3
 
 Name: 		%{name}
 Version: 	%{version}
