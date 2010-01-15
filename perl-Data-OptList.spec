@@ -1,38 +1,39 @@
-%define module  Data-OptList
-%define	name	perl-%{module}
-%define version 0.104
-%define release %mkrel 2
+%define upstream_name    Data-OptList
+%define upstream_version 0.105
 
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary: 	Parse and validate simple name/value option pairs
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group: 		Development/Perl
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Data/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl(Sub::Install)
 BuildRequires:  perl(Params::Util)
+
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description 
 Hashes are great for storing named data, but if you want more than one entry
 for a name, you have to use a list of pairs.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
+%check
+%make test
+
 %install
 %{__rm} -rf %{buildroot}
 %{makeinstall_std}
-
-%check
-%{__make} test
 
 %clean 
 %{__rm} -rf %{buildroot}
@@ -42,4 +43,3 @@ for a name, you have to use a list of pairs.
 %doc Changes README
 %{perl_vendorlib}/Data
 %{_mandir}/*/*
-
