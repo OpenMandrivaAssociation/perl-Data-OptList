@@ -1,5 +1,5 @@
 %define upstream_name    Data-OptList
-%define upstream_version 0.105
+%define upstream_version 0.106
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
