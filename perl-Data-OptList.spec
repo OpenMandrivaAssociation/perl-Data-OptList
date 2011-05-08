@@ -1,9 +1,9 @@
 %define upstream_name    Data-OptList
-%define upstream_version 0.106
+%define upstream_version 0.107
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary: 	Parse and validate simple name/value option pairs
 License: 	GPL+ or Artistic
