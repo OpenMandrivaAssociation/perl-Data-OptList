@@ -1,14 +1,14 @@
 %define modname	Data-OptList
-%define modver	0.107
+%define modver 0.109
 
 Summary:	Parse and validate simple name/value option pairs
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Data/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Data/Data-OptList-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Sub::Install)
@@ -35,4 +35,5 @@ for a name, you have to use a list of pairs.
 %doc Changes README
 %{perl_vendorlib}/Data
 %{_mandir}/man3/*
+
 
