@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Data/Data-OptList-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	perl(Sub::Install)
 BuildRequires:	perl(Params::Util)
