@@ -1,13 +1,13 @@
 %define modname	Data-OptList
-%define modver 0.109
+%define modver 0.110
 
 Summary:	Parse and validate simple name/value option pairs
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	7
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/Data::OptList
 Source0:	http://www.cpan.org/modules/by-module/Data/Data-OptList-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
