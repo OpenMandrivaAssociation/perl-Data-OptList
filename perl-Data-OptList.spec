@@ -1,5 +1,5 @@
 %define modname	Data-OptList
-%define modver 0.110
+%define modver 0.112
 
 Summary:	Parse and validate simple name/value option pairs
 Name:		perl-%{modname}
