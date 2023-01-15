@@ -1,14 +1,13 @@
 %define modname	Data-OptList
-%define modver 0.112
 
 Summary:	Parse and validate simple name/value option pairs
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	0.113
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Data::OptList
-Source0:	http://www.cpan.org/modules/by-module/Data/Data-OptList-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Data/Data-OptList-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
@@ -20,21 +19,19 @@ Hashes are great for storing named data, but if you want more than one entry
 for a name, you have to use a list of pairs.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
 %{perl_vendorlib}/Data
 %{_mandir}/man3/*
-
-
