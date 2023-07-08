@@ -3,7 +3,7 @@
 Summary:	Parse and validate simple name/value option pairs
 Name:		perl-%{modname}
 Version:	0.114
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Data::OptList
